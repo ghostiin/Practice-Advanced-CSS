@@ -1,0 +1,65 @@
+body {
+	/* font-family: 'Noto Serif CJK SC', 'Noto Serif CJK', 'Source Han Serif'; */
+	font-family: 'Times New Roman', 'Source Han Serif';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+	color: $color-grey-dark;
+	padding: 30px;
+}
+
+.heading-primary {
+	color: $color-white;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+	margin-bottom: 60px;
+
+	&--main {
+		display: block;
+		font-size: 60px;
+		letter-spacing: 30px;
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
+
+	&--sub {
+		display: block;
+		font-size: 20px;
+		letter-spacing: 4.5px;
+		animation: moveInRight 1s ease-out;
+	}
+}
+
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	display: inline-block;
+	background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+
+	transition: all .2s;
+	&:hover {
+		transform: skewX(15deg) skewY(-2deg) scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba(6, 12, 49, 0.2);
+	}
+}
+
+.heading-tertiary {
+	color: $color-grey-dark-2;
+	font-size: $font-default-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragragh {
+	font-size: $font-default-size;
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
