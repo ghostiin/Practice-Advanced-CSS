@@ -7,13 +7,18 @@
 	position: relative;
 }
 
-.btn {
-	&:link {
-		@extend %btn-placeholder;
-	}
+%btn-default {
+	//change default button
+	border: none;
+	cursor: pointer;
+}
 
+.btn {
+	&,
+	&:link,
 	&:visited {
 		@extend %btn-placeholder;
+		@extend %btn-default;
 	}
 
 	&:hover {
@@ -25,7 +30,9 @@
 		}
 	}
 
-	&:active {
+	&:active,
+	&:focus {
+		outline: none;
 		transform: translateY(1px);
 		box-shadow: 0 5px 10px rgba(6, 12, 49, 0.5);
 	}
@@ -37,6 +44,16 @@
 
 		&::after {
 			background-color: $color-white;
+		}
+	}
+
+	&--purple {
+		background-color: $color-primary;
+		padding: 15px 40px;
+		color: $color-white;
+
+		&::after {
+			background-color: $color-primary;
 		}
 	}
 
