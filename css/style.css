@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0-600px: phone 
 600-900px: Tablet portrait
@@ -26,23 +27,27 @@ BASE+TYPROGRAPH >GENERAL LAYOUT + GRID > PAGE LAYOUT>component
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       font-size: 50%;
       padding: 0; } }
+
+::selection {
+  background-color: #9862fc;
+  color: #fff; }
 
 @keyframes moveInLeft {
   0% {
@@ -74,7 +79,7 @@ body {
 
 body {
   /* font-family: 'Noto Serif CJK SC', 'Noto Serif CJK', 'Source Han Serif'; */
-  font-family: 'Times New Roman', 'Source Han Serif';
+  font-family: 'Noto Serif SC', 'Lato', serif，sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -92,7 +97,7 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-size: 5rem; } }
@@ -101,7 +106,7 @@ body {
     font-size: 1.8rem;
     letter-spacing: 1rem;
     animation: moveInRight 1s ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: .5rem;
         font-size: 1.3rem; } }
@@ -120,10 +125,10 @@ body {
   .heading-secondary:hover {
     transform: skewX(15deg) skewY(-2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(6, 12, 49, 0.2); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.5rem; } }
 
@@ -143,19 +148,19 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-big {
       margin-bottom: 6rem !important; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-medium {
       margin-bottom: 2rem !important; } }
 
 .u-margin-bottom-small {
   margin-bottom: 2rem !important; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-small {
       margin-bottom: 1rem !important; } }
 
@@ -223,6 +228,30 @@ body {
     column-rule: 1px solid #eee;
     -webkit-hyphens: auto;
     hyphens: auto; }
+  @media only screen and (max-width: 56.25em) {
+    .popup__content {
+      display: block;
+      position: relative; }
+    .popup__left {
+      display: block;
+      position: relative;
+      width: 100%;
+      left: 0;
+      top: 0;
+      text-align: center; }
+    .popup__right {
+      display: block;
+      width: 100%;
+      padding: 4rem; }
+    .popup__img {
+      display: inline-block;
+      width: 40%; }
+    .popup__text {
+      font-size: 1.4rem;
+      margin: 4rem 0;
+      columns: 1;
+      -webkit-hyphens: auto;
+      hyphens: auto; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -239,7 +268,7 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
   .form__input:focus {
@@ -267,7 +296,7 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__radio-group {
       width: 100%;
       margin-bottom: 1rem; } }
@@ -339,12 +368,12 @@ body {
   font-size: 1.6rem;
   background-color: rgba(255, 255, 255, 0.6);
   transform: skewX(-12deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .work {
       width: 100%;
       padding: 5rem;
       padding-left: 7rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .work {
       transform: skewX(0); } }
   .work__shape {
@@ -357,7 +386,7 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .work__shape {
         transform: translateX(-3rem) skewX(0); } }
   .work__img {
@@ -370,7 +399,7 @@ body {
     backface-visibility: hidden; }
   .work__text {
     transform: skewX(12deg); }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .work__text {
         transform: skewX(0); } }
   .work__caption {
@@ -479,7 +508,7 @@ body {
     font-size: 2.2rem;
     text-transform: uppercase;
     color: #fff; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       border-radius: 4px; }
@@ -523,7 +552,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin-bottom: 0rem; } }
   .feature-box:hover {
@@ -539,7 +568,7 @@ body {
     position: absolute;
     transition: all .2s;
     outline-offset: 2rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__img {
         position: relative;
         float: left;
@@ -548,19 +577,19 @@ body {
     .composition__img--p1 {
       left: 1rem;
       top: 2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__img--p1 {
           top: 0; } }
     .composition__img--p2 {
       right: 0;
       top: 8rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__img--p2 {
           top: 0; } }
     .composition__img--p3 {
       left: 20%;
       top: 20rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__img--p3 {
           top: 0;
           left: 0; } }
@@ -650,13 +679,13 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
       padding: 0 4rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
   .row::after {
@@ -667,11 +696,11 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -694,7 +723,7 @@ body {
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   position: relative; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); } }
   .header__logo-box {
@@ -714,13 +743,13 @@ body {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 6rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 4rem; } }
   .footer__logo {
@@ -730,7 +759,7 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
@@ -740,6 +769,9 @@ body {
     display: inline-block; }
     .footer__item:not(:last-child) {
       margin-right: 4rem; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__item:not(:last-child) {
+          margin-right: 2rem; } }
   .footer__copyright {
     color: #f7f7f7;
     border-top: 1px solid #777;
@@ -747,7 +779,7 @@ body {
     display: inline-block;
     width: 85%;
     float: right; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
         text-align: center;
@@ -779,11 +811,11 @@ body {
   z-index: 100;
   text-align: center;
   cursor: pointer; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__button {
       top: 4rem;
       right: 4rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__button {
       top: 3rem;
       right: 3rem; } }
@@ -799,11 +831,11 @@ body {
   z-index: 20;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__background {
       top: 4.5rem;
       right: 4.5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__background {
       top: 3.5rem;
       right: 3.5rem; } }
@@ -894,33 +926,37 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -15vh; }
-  .section-about .composition__img {
-    z-index: 5; }
 
 .section-skills {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(205, 196, 222, 0.75), rgba(73, 11, 187, 0.75)), url(../img/tiger-2.jpg);
-  background-position: bottom;
+  background-position: bottom right;
   transform: skewY(-8deg);
   margin-top: -11rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-skills {
       padding: 10rem 0; } }
   .section-skills > * {
     transform: skewY(8deg); }
+  @media only screen and (min-width: 112.5em) {
+    .section-skills {
+      background-size: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    .section-skills {
+      background-size: cover; } }
 
 .section-project {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -11rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-project {
       padding: 20rem 0 10rem 0; } }
 
 .section_profession {
   padding: 15rem 0;
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section_profession {
       padding: 10rem 0; } }
 
@@ -933,19 +969,19 @@ body {
   background-size: 100%;
   border-radius: 4px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35); }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .contact {
       background-image: linear-gradient(80deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 65%, transparent 65%), url(../img/tiger-3.jpg);
       background-size: cover; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .contact {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), url(../img/tiger-3.jpg); } }
   .contact__form {
     width: 50%;
     padding: 6rem; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .contact__form {
         width: 65%; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .contact__form {
         width: 100%; } }

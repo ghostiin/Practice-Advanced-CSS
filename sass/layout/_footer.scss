@@ -41,6 +41,9 @@
 
 		&:not(:last-child) {
 			margin-right: 4rem;
+			@include responsive(tab-port) {
+				margin-right: 2rem;
+			}
 		}
 	}
 

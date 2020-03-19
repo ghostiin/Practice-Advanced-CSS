@@ -2,10 +2,6 @@
 	background-color: $color-grey-light-1;
 	padding: 25rem 0;
 	margin-top: -15vh;
-
-	.composition__img {
-		z-index: 5;
-	}
 }
 
 .section-skills {
@@ -19,11 +15,18 @@
 			rgba($color-primary-dark, 0.75)
 		),
 		url(../img/tiger-2.jpg);
-	background-position: bottom;
+	background-position: bottom right;
 	transform: skewY(-8deg);
 	margin-top: -11rem;
 	& > * {
 		transform: skewY(8deg);
+	}
+	@include responsive(big-desktop) {
+		background-size: 100%;
+	}
+
+	@include responsive(tab-port) {
+		background-size: cover;
 	}
 }
 

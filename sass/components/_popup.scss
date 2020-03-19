@@ -76,4 +76,38 @@
 		-webkit-hyphens: auto;
 		hyphens: auto;
 	}
+
+	@include responsive(tab-port) {
+		&__content {
+			display: block;
+			position: relative;
+		}
+
+		&__left {
+			display: block;
+			position: relative;
+			width: 100%;
+			left: 0;
+			top: 0;
+			text-align: center;
+		}
+
+		&__right {
+			display: block;
+			width: 100%;
+			padding: 4rem;
+		}
+
+		&__img {
+			display: inline-block;
+			width: 40%;
+		}
+		&__text {
+			font-size: 1.4rem;
+			margin: 4rem 0;
+			columns: 1;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+	}
 }
