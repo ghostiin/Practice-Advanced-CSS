@@ -151,4 +151,48 @@
 		text-transform: uppercase;
 		color: $color-white;
 	}
+
+	@include responsive(tab-port) {
+		height: auto;
+		border-radius: 4px;
+
+		&__side {
+			//FUNCTIONAL
+			height: auto;
+			position: relative;
+
+			&--b {
+				transform: rotateY(0);
+				clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+				margin-top: -5rem;
+			}
+		}
+
+		&:hover &__side--a {
+			transform: rotateY(0);
+		}
+
+		&__detail {
+			padding: 4rem 1rem;
+		}
+
+		&__cta {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: translate(0);
+			width: 100%;
+			padding: 7rem 4rem;
+		}
+
+		&__text-box {
+			margin-bottom: 4rem;
+		}
+
+		&__text-paragraph {
+			font-size: 2.2rem;
+			text-transform: uppercase;
+			color: $color-white;
+		}
+	}
 }

@@ -9,6 +9,16 @@
 	background-color: rgba($color-white, 0.6);
 	transform: skewX(-12deg);
 
+	@include responsive(tab-port) {
+		width: 100%;
+		padding: 5rem;
+		padding-left: 7rem;
+	}
+
+	@include responsive(phone) {
+		transform: skewX(0);
+	}
+
 	&__shape {
 		width: 15rem;
 		height: 15rem;
@@ -19,6 +29,9 @@
 		clip-path: circle(50% at 50% 50%);
 		transform: translateX(-3rem) skewX(12deg);
 		position: relative;
+		@include responsive(phone) {
+			transform: translateX(-3rem) skewX(0);
+		}
 	}
 	&__img {
 		width: 50%;
@@ -31,6 +44,10 @@
 	}
 	&__text {
 		transform: skewX(12deg);
+
+		@include responsive(phone) {
+			transform: skewX(0);
+		}
 	}
 	&__caption {
 		position: absolute;
