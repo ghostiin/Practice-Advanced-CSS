@@ -1,4 +1,4 @@
-# Advanced-CSS-Practice
+# Practice-Advanced-CSS
 learning advanced css
 
 - online demo: https://ghostiin.github.io/Advanced-CSS-Practice/
