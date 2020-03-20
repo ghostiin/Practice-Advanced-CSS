@@ -1,7 +1,7 @@
 # Practice-Advanced-CSS
 learning advanced css
 
-- online demo: https://ghostiin.github.io/Advanced-CSS-Practice/
+- online demo: https://ghostiin.github.io/Practice-Advanced-CSS/
 
 learning html/css/sass
 - css animation
